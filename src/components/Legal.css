@@ -1,0 +1,107 @@
+.legal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: legalFadeIn 0.25s ease;
+}
+
+@keyframes legalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.legal__modal {
+  background: var(--noir-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  max-width: 650px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.legal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.legal__close:hover {
+  color: var(--blanc);
+}
+
+.legal__title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blanc);
+  letter-spacing: 2px;
+  margin: 0 0 2rem;
+}
+
+.legal__section {
+  margin-bottom: 1.5rem;
+}
+
+.legal__section h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--rouge);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.legal__section p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.legal__section a {
+  color: var(--rouge);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.legal__section a:hover {
+  opacity: 0.75;
+}
+
+/* Scrollbar inside modal */
+.legal__modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.legal__modal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .legal__overlay {
+    padding: 1rem;
+  }
+
+  .legal__modal {
+    padding: 1.5rem;
+    max-height: 85vh;
+  }
+}

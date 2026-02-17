@@ -59,8 +59,14 @@ export const faq = [
 ]
 
 export const socials = {
-  instagram: 'https://instagram.com/sauroraa',
-  facebook: 'https://facebook.com/sauroraa',
-  tiktok: 'https://tiktok.com/@sauroraa',
+  instagram: 'https://www.instagram.com/sauroraa.be/',
+  facebook: 'https://www.facebook.com/profile.php?id=61559887667238',
   email: 'contact@sauroraa.be',
+}
+
+export const legal = {
+  entreprise: 'SAURORAA',
+  numero: '1031.598.463',
+  email: 'contact@sauroraa.be',
+  site: 'https://tickets.sauroraa.be',
 }
