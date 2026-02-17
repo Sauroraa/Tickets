@@ -1,9 +1,9 @@
 export const event = {
   name: 'SAURORAA',
-  tagline: 'The Jump-Up Ritual',
-  date: '2026-05-16T22:00:00',
-  dateDisplay: '16 Mai 2026',
-  horaires: '22h00 — 06h00',
+  tagline: 'Stronger & Better',
+  date: '2026-03-28T20:00:00',
+  dateDisplay: '28 Mars 2026',
+  horaires: '20h00 — 06h00',
   style: 'Jump-Up / Drum & Bass',
   lieu: {
     nom: 'Palais des Congrès de Liège',
@@ -11,10 +11,10 @@ export const event = {
     maps: 'https://maps.google.com/?q=Palais+des+Congrès+de+Liège',
   },
   tarifs: [
-    { nom: 'Early Bird', prix: '12€', status: 'Disponible', description: 'Places limitées' },
-    { nom: 'Regular', prix: '18€', status: 'Bientôt', description: 'Tarif standard' },
-    { nom: 'Last Wave', prix: '25€', status: 'Bientôt', description: 'Dernières places' },
-    { nom: 'VIP', prix: '40€', status: 'Bientôt', description: 'Accès VIP + boisson offerte' },
+    { nom: 'Vague 1 (Super Early)', prix: '15,00\u20AC', status: 'En vente', description: '50 places' },
+    { nom: 'Vague 2 (Early)', prix: '20,00\u20AC', status: 'Bientôt', description: '50 places' },
+    { nom: 'Vague 3 (Regular)', prix: '25,00\u20AC', status: 'Bientôt', description: '50 places' },
+    { nom: 'Vague 5 (Last Chance)', prix: '30,00\u20AC', status: 'Bientôt', description: '250 places' },
   ],
   weezevent: {
     url: 'https://widget.weezevent.com/ticket/E1369359/?code=23980&locale=fr-FR&width_auto=1&color_primary=E10600',
@@ -23,9 +23,21 @@ export const event = {
 }
 
 export const lineup = {
-  revealed: false,
+  revealed: true,
   artists: [
-    // { name: 'DJ Example', label: 'Label Records', style: 'Jump-Up', country: 'UK', image: '/assets/artist1.jpg' },
+    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer', tag: null },
+    { time: '20h45 - 21h30', name: 'Erbmos', tag: null },
+    { time: '21h30 - 22h15', name: 'Mono Audio', tag: null },
+    { time: '22h15 - 23h00', name: 'Underground Waves', tag: 'SHOWCASE' },
+    { time: '23h00 - 23h45', name: 'The Prototypes', tag: 'IN CONFIRMATION' },
+    { time: '23h45 - 00h45', name: 'NXW & Juliux & Jack-E', tag: 'BDAY SET \u2022 1H' },
+    { time: '00h45 - 01h30', name: 'Tsuki / BadHabitz', tag: 'SHOWCASE' },
+    { time: '01h30 - 02h15', name: 'Jump UP Cave', tag: 'IN CONFIRMATION' },
+    { time: '02h15 - 03h00', name: 'Fanatics B2B Latte', tag: 'IN CONFIRMATION' },
+    { time: '03h00 - 03h45', name: 'Sero B2B Sedativ B2B MATOX B2B Zequals', tag: null },
+    { time: '03h45 - 04h30', name: 'Chamber B2B Big Jay', tag: null },
+    { time: '04h30 - 05h15', name: 'Skamm B2B Lixed', tag: null },
+    { time: '05h15 - 06h00', name: 'Equinoxx', tag: 'SHOWCASE' },
   ],
 }
 
@@ -40,7 +52,7 @@ export const ambiance = {
 
 export const faq = [
   { question: 'Quel est l\'âge minimum ?', answer: 'L\'événement est accessible à partir de 18 ans. Une pièce d\'identité pourra être demandée à l\'entrée.' },
-  { question: 'Y a-t-il un vestiaire ?', answer: 'Oui, un vestiaire sera disponible sur place (payant, environ 2€).' },
+  { question: 'Y a-t-il un vestiaire ?', answer: 'Oui, un vestiaire sera disponible sur place (payant, environ 2\u20AC).' },
   { question: 'Peut-on payer sur place ?', answer: 'Un bar sera disponible avec paiement en cash et par carte. Les tickets doivent être achetés en ligne à l\'avance.' },
   { question: 'Y a-t-il un parking à proximité ?', answer: 'Oui, le Palais des Congrès dispose d\'un parking à proximité. Nous recommandons cependant les transports en commun.' },
   { question: 'Comment venir en transports en commun ?', answer: 'Le Palais des Congrès est accessible en bus TEC. Arrêt "Palais des Congrès" sur plusieurs lignes.' },

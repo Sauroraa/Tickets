@@ -29,7 +29,7 @@ export default function Info() {
           <h3>Tarifs</h3>
           <div className="info__tarifs">
             {event.tarifs.map((t, i) => (
-              <div key={i} className={`info__tarif ${t.status === 'Disponible' ? 'info__tarif--active' : ''}`}>
+              <div key={i} className={`info__tarif ${t.status === 'En vente' ? 'info__tarif--active' : ''}`}>
                 <div className="info__tarif-header">
                   <span className="info__tarif-nom">{t.nom}</span>
                   <span className="info__tarif-prix">{t.prix}</span>
