@@ -1,0 +1,79 @@
+.ambiance {
+  position: relative;
+  padding: 8rem 2rem;
+  background: var(--noir);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ambiance__laser {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--rouge), transparent 40%, transparent 60%, var(--rouge-dark));
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.ambiance__laser::before,
+.ambiance__laser::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ambiance__laser::before {
+  left: -100px;
+  background: linear-gradient(to bottom, rgba(225, 6, 0, 0.05), transparent 50%);
+}
+
+.ambiance__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+}
+
+.ambiance__line {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  color: var(--blanc);
+  margin: 0.8rem 0;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.ambiance__line:last-of-type {
+  color: var(--rouge);
+  opacity: 1;
+}
+
+.ambiance__cta {
+  margin-top: 3rem;
+  padding: 0.9rem 2.5rem;
+  background: transparent;
+  color: var(--rouge);
+  border: 2px solid var(--rouge);
+  border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.ambiance__cta:hover {
+  background: var(--rouge);
+  color: var(--blanc);
+  box-shadow: 0 0 25px rgba(225, 6, 0, 0.4);
+}

@@ -1,0 +1,123 @@
+.info {
+  padding: 6rem 2rem;
+  background: var(--noir);
+  text-align: center;
+}
+
+.info__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.info__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  transition: border-color 0.3s;
+}
+
+.info__card:hover {
+  border-color: rgba(225, 6, 0, 0.3);
+}
+
+.info__card--tarifs {
+  grid-column: 1 / -1;
+}
+
+.info__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info__card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--rouge);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem;
+}
+
+.info__main {
+  font-size: 1.1rem;
+  color: var(--blanc);
+  margin: 0 0 0.3rem;
+  font-weight: 500;
+}
+
+.info__sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.info__link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--rouge);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.info__link:hover {
+  border-bottom-color: var(--rouge);
+}
+
+.info__tarifs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.info__tarif {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.3s;
+}
+
+.info__tarif--active {
+  border-color: var(--rouge);
+  background: rgba(225, 6, 0, 0.05);
+}
+
+.info__tarif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.info__tarif-nom {
+  font-weight: 600;
+  color: var(--blanc);
+  font-size: 0.95rem;
+}
+
+.info__tarif-prix {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+.info__tarif-status {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info__tarif--active .info__tarif-status {
+  color: var(--rouge);
+}

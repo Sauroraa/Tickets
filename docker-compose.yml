@@ -1,0 +1,7 @@
+services:
+  tickets:
+    build: .
+    container_name: sauroraa-tickets
+    ports:
+      - "80:80"
+    restart: unless-stopped
