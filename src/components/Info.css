@@ -6,23 +6,23 @@
 
 .info__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 3rem auto 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .info__card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
+  background: var(--noir-card);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
   padding: 2rem;
   text-align: left;
-  transition: border-color 0.3s;
+  transition: border-color 0.4s ease;
 }
 
 .info__card:hover {
-  border-color: rgba(225, 6, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .info__card--tarifs {
@@ -30,13 +30,14 @@
 }
 
 .info__icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
 }
 
 .info__card h3 {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--rouge);
   letter-spacing: 2px;
@@ -45,15 +46,15 @@
 }
 
 .info__main {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--blanc);
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.25rem;
   font-weight: 500;
 }
 
 .info__sub {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  color: var(--gris);
   margin: 0;
 }
 
@@ -61,63 +62,73 @@
   display: inline-block;
   margin-top: 0.8rem;
   color: var(--rouge);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  transition: opacity 0.2s ease;
 }
 
 .info__link:hover {
-  border-bottom-color: var(--rouge);
+  opacity: 0.75;
 }
 
+/* Tarifs */
 .info__tarifs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .info__tarif {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 1rem;
-  transition: border-color 0.3s;
+  background: var(--noir-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  transition: border-color 0.3s ease;
 }
 
 .info__tarif--active {
-  border-color: var(--rouge);
-  background: rgba(225, 6, 0, 0.05);
+  border-color: var(--rouge-border);
+  background: linear-gradient(135deg, rgba(225, 6, 0, 0.06) 0%, var(--noir-elevated) 100%);
 }
 
 .info__tarif-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .info__tarif-nom {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--blanc);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .info__tarif-prix {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--rouge);
 }
 
 .info__tarif-status {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .info__tarif--active .info__tarif-status {
   color: var(--rouge);
+}
+
+@media (max-width: 768px) {
+  .info__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info__tarifs {
+    grid-template-columns: 1fr;
+  }
 }

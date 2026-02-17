@@ -14,7 +14,6 @@ export const event = {
     { nom: 'Vague 1 (Super Early)', prix: '15,00\u20AC', status: 'En vente', description: '50 places' },
     { nom: 'Vague 2 (Early)', prix: '20,00\u20AC', status: 'Bientôt', description: '50 places' },
     { nom: 'Vague 3 (Regular)', prix: '25,00\u20AC', status: 'Bientôt', description: '50 places' },
-    { nom: 'Vague 5 (Last Chance)', prix: '30,00\u20AC', status: 'Bientôt', description: '250 places' },
   ],
   weezevent: {
     url: 'https://widget.weezevent.com/ticket/E1369359/?code=23980&locale=fr-FR&width_auto=1&color_primary=E10600',

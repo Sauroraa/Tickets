@@ -1,24 +1,24 @@
 .billetterie {
   padding: 6rem 2rem;
-  background: linear-gradient(180deg, #0f0f0f 0%, var(--noir) 100%);
+  background: var(--noir);
   text-align: center;
 }
 
 .billetterie__reassurance {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1rem;
-  max-width: 500px;
-  margin: 1rem auto 3rem;
+  color: var(--gris);
+  font-size: 0.9rem;
+  max-width: 420px;
+  margin: -1.5rem auto 2.5rem;
   line-height: 1.6;
 }
 
 .billetterie__widget {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   min-height: 400px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(225, 6, 0, 0.1);
-  border-radius: 12px;
+  background: var(--noir-card);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
   padding: 1.5rem;
   overflow: hidden;
 }

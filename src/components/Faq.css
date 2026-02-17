@@ -4,12 +4,12 @@
 }
 
 .faq__list {
-  max-width: 700px;
-  margin: 3rem auto 0;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .faq__item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .faq__question {
@@ -17,42 +17,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0;
+  padding: 1.1rem 0;
   background: none;
   border: none;
-  color: var(--blanc);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
   text-align: left;
-  transition: color 0.2s;
+  transition: color 0.25s ease;
 }
 
 .faq__question:hover {
-  color: var(--rouge);
+  color: var(--blanc);
 }
 
 .faq__chevron {
-  font-size: 1.4rem;
-  color: var(--rouge);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.25);
   flex-shrink: 0;
   margin-left: 1rem;
+  transition: color 0.25s ease;
+}
+
+.faq__item--open .faq__chevron {
+  color: var(--rouge);
 }
 
 .faq__answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.35s ease, padding 0.35s ease;
 }
 
 .faq__item--open .faq__answer {
   max-height: 200px;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .faq__answer p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: var(--gris);
+  font-size: 0.88rem;
+  line-height: 1.7;
 }

@@ -28,24 +28,24 @@ export default function Lineup() {
       <h2 className="section-title">LINE-UP</h2>
 
       {lineup.revealed ? (
-        <div className={`lineup__timeline ${visible ? 'lineup__timeline--visible' : ''}`}>
-          <div className="lineup__line" />
+        <div className={`lineup__list ${visible ? 'lineup__list--visible' : ''}`}>
           {lineup.artists.map((artist, i) => (
             <div
               key={i}
-              className={`lineup__slot ${artist.tag === 'IN CONFIRMATION' ? 'lineup__slot--pending' : ''}`}
-              style={{ transitionDelay: `${i * 0.07}s` }}
+              className={`lineup__row ${artist.tag === 'IN CONFIRMATION' ? 'lineup__row--pending' : ''}`}
+              style={{ transitionDelay: `${i * 0.05}s` }}
             >
-              <div className="lineup__dot" />
               <span className="lineup__time">{artist.time}</span>
-              <div className="lineup__info">
-                <span className="lineup__name">{artist.name}</span>
-                {artist.tag && (
-                  <span className={`lineup__tag ${artist.tag === 'SHOWCASE' ? 'lineup__tag--showcase' : ''} ${artist.tag === 'IN CONFIRMATION' ? 'lineup__tag--pending' : ''} ${artist.tag.includes('BDAY') ? 'lineup__tag--special' : ''}`}>
-                    {artist.tag}
-                  </span>
-                )}
-              </div>
+              <span className="lineup__name">{artist.name}</span>
+              {artist.tag && (
+                <span className={`lineup__tag ${
+                  artist.tag === 'SHOWCASE' ? 'lineup__tag--showcase' :
+                  artist.tag === 'IN CONFIRMATION' ? 'lineup__tag--pending' :
+                  artist.tag.includes('BDAY') ? 'lineup__tag--special' : ''
+                }`}>
+                  {artist.tag}
+                </span>
+              )}
             </div>
           ))}
         </div>

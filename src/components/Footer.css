@@ -1,51 +1,51 @@
 .footer {
   padding: 3rem 2rem;
-  background: #050505;
-  border-top: 1px solid rgba(225, 6, 0, 0.1);
+  background: var(--noir);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   text-align: center;
 }
 
 .footer__inner {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.3rem;
 }
 
 .footer__logo {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--rouge);
   letter-spacing: 4px;
 }
 
 .footer__socials {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .footer__socials a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: color 0.2s;
+  transition: color 0.25s ease;
 }
 
 .footer__socials a:hover {
-  color: var(--rouge);
+  color: var(--blanc);
 }
 
 .footer__bottom {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -53,5 +53,5 @@
 }
 
 .footer__sep {
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.1);
 }
