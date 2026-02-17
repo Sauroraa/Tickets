@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { useTranslation } from '../i18n/LanguageContext'
 import { event } from '../data/eventData'
 import './Hero.css'
 
@@ -92,8 +93,11 @@ function Particles() {
   return <canvas ref={canvasRef} className="hero__particles" />
 }
 
+const countdownKeys = ['jours', 'heures', 'minutes', 'secondes']
+
 export default function Hero() {
   const countdown = useCountdown(event.date)
+  const { t } = useTranslation()
 
   const scrollToBilletterie = () => {
     document.getElementById('billetterie')?.scrollIntoView({ behavior: 'smooth' })
@@ -111,7 +115,7 @@ export default function Hero() {
         </h1>
 
         <div className="hero__meta">
-          <span>{event.dateDisplay}</span>
+          <span>{t.event.dateDisplay}</span>
           <span className="hero__dot" />
           <span>{event.lieu.nom}</span>
           <span className="hero__dot" />
@@ -119,18 +123,18 @@ export default function Hero() {
         </div>
 
         <div className="hero__countdown">
-          {Object.entries(countdown).map(([label, value]) => (
-            <div key={label} className="hero__countdown-item">
+          {countdownKeys.map((key) => (
+            <div key={key} className="hero__countdown-item">
               <div className="hero__countdown-box">
-                <span className="hero__countdown-value">{String(value).padStart(2, '0')}</span>
+                <span className="hero__countdown-value">{String(countdown[key]).padStart(2, '0')}</span>
               </div>
-              <span className="hero__countdown-label">{label}</span>
+              <span className="hero__countdown-label">{t.hero.countdown[key]}</span>
             </div>
           ))}
         </div>
 
         <button className="hero__cta" onClick={scrollToBilletterie}>
-          PRENDRE MON TICKET
+          {t.hero.cta}
         </button>
       </div>
     </section>

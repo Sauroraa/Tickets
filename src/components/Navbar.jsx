@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from '../i18n/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
 import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -26,16 +29,19 @@ export default function Navbar() {
         </button>
 
         <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          <li onClick={() => scrollTo('ambiance')}>Ambiance</li>
-          <li onClick={() => scrollTo('lineup')}>Line-Up</li>
-          <li onClick={() => scrollTo('info')}>Infos</li>
-          <li onClick={() => scrollTo('billetterie')}>Billetterie</li>
-          <li onClick={() => scrollTo('faq')}>FAQ</li>
+          <li onClick={() => scrollTo('ambiance')}>{t.nav.ambiance}</li>
+          <li onClick={() => scrollTo('lineup')}>{t.nav.lineup}</li>
+          <li onClick={() => scrollTo('info')}>{t.nav.info}</li>
+          <li onClick={() => scrollTo('billetterie')}>{t.nav.billetterie}</li>
+          <li onClick={() => scrollTo('faq')}>{t.nav.faq}</li>
         </ul>
 
-        <a href="#billetterie" className="navbar__cta" onClick={(e) => { e.preventDefault(); scrollTo('billetterie') }}>
-          PRENDRE MON TICKET
-        </a>
+        <div className="navbar__right">
+          <LanguageSwitcher />
+          <a href="#billetterie" className="navbar__cta" onClick={(e) => { e.preventDefault(); scrollTo('billetterie') }}>
+            {t.nav.cta}
+          </a>
+        </div>
       </div>
     </nav>
   )

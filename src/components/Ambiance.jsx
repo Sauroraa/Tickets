@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ambiance } from '../data/eventData'
+import { useTranslation } from '../i18n/LanguageContext'
 import './Ambiance.css'
 
 function useInView(ref, threshold = 0.3) {
@@ -22,6 +22,7 @@ function useInView(ref, threshold = 0.3) {
 export default function Ambiance() {
   const sectionRef = useRef(null)
   const visible = useInView(sectionRef, 0.2)
+  const { t } = useTranslation()
 
   const scrollToBilletterie = () => {
     document.getElementById('billetterie')?.scrollIntoView({ behavior: 'smooth' })
@@ -30,7 +31,7 @@ export default function Ambiance() {
   return (
     <section id="ambiance" className="ambiance" ref={sectionRef}>
       <div className={`ambiance__content ${visible ? 'ambiance__content--visible' : ''}`}>
-        {ambiance.lines.map((line, i) => (
+        {t.ambiance.lines.map((line, i) => (
           <p
             key={i}
             className="ambiance__line"
@@ -39,8 +40,8 @@ export default function Ambiance() {
             {line}
           </p>
         ))}
-        <button className="ambiance__cta" style={{ transitionDelay: `${ambiance.lines.length * 0.12}s` }} onClick={scrollToBilletterie}>
-          Réserver maintenant
+        <button className="ambiance__cta" style={{ transitionDelay: `${t.ambiance.lines.length * 0.12}s` }} onClick={scrollToBilletterie}>
+          {t.ambiance.cta}
         </button>
       </div>
     </section>

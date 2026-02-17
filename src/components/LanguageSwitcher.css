@@ -1,0 +1,35 @@
+.lang-switcher {
+  display: flex;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-xs);
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.lang-switcher__btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.5rem;
+  border-radius: calc(var(--radius-xs) - 2px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-switcher__btn:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-switcher__btn--active {
+  background: var(--rouge);
+  color: var(--blanc);
+}
+
+.lang-switcher__btn--active:hover {
+  color: var(--blanc);
+}

@@ -1,7 +1,10 @@
+import { useTranslation } from '../i18n/LanguageContext'
 import { socials, legal } from '../data/eventData'
 import './Footer.css'
 
 export default function Footer({ onLegalClick }) {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer">
       <div className="footer__inner">
@@ -16,9 +19,9 @@ export default function Footer({ onLegalClick }) {
         <div className="footer__bottom">
           <span>&copy; {new Date().getFullYear()} {legal.entreprise} &mdash; N&deg; {legal.numero}</span>
           <span className="footer__sep">|</span>
-          <button className="footer__legal-btn" onClick={onLegalClick}>Mentions légales</button>
+          <button className="footer__legal-btn" onClick={onLegalClick}>{t.footer.legal}</button>
           <span className="footer__sep">|</span>
-          <span>Billetterie par Weezevent</span>
+          <span>{t.footer.weezevent}</span>
         </div>
       </div>
     </footer>

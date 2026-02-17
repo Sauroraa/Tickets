@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from './i18n/LanguageContext'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -12,6 +13,7 @@ import Legal from './components/Legal'
 
 export default function App() {
   const [legalOpen, setLegalOpen] = useState(false)
+  const { t } = useTranslation()
 
   const scrollToBilletterie = () => {
     document.getElementById('billetterie')?.scrollIntoView({ behavior: 'smooth' })
@@ -31,7 +33,7 @@ export default function App() {
 
       <div className="mobile-cta">
         <button className="mobile-cta__btn" onClick={scrollToBilletterie}>
-          PRENDRE MON TICKET
+          {t.mobileCta}
         </button>
       </div>
     </>
