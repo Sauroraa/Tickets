@@ -28,7 +28,6 @@ export default function Lineup() {
   const getTagLabel = (tag) => {
     if (!tag) return null
     if (tag === 'SHOWCASE') return t.lineup.tags.showcase
-    if (tag === 'IN CONFIRMATION') return t.lineup.tags.pending
     if (tag.includes('BDAY')) return tag
     return tag
   }
@@ -42,22 +41,18 @@ export default function Lineup() {
           {lineup.artists.map((artist, i) => (
             <div
               key={i}
-              className={`lineup__row ${artist.tag === 'IN CONFIRMATION' ? 'lineup__row--pending' : ''} ${artist.blur ? 'lineup__row--blur' : ''}`}
+              className={`lineup__row ${artist.blur ? 'lineup__row--blur' : ''}`}
               style={{ transitionDelay: `${i * 0.05}s` }}
             >
               <span className="lineup__time">{artist.blur ? '??h?? - ??h??' : artist.time}</span>
-              <span className="lineup__name">{artist.blur ? '???????????' : artist.name}</span>
+              <span className="lineup__name">{artist.blur ? 'Artiste à confirmer' : artist.name}</span>
               {artist.tag && !artist.blur && (
                 <span className={`lineup__tag ${
                   artist.tag === 'SHOWCASE' ? 'lineup__tag--showcase' :
-                  artist.tag === 'IN CONFIRMATION' ? 'lineup__tag--pending' :
                   artist.tag.includes('BDAY') ? 'lineup__tag--special' : ''
                 }`}>
                   {getTagLabel(artist.tag)}
                 </span>
-              )}
-              {artist.blur && (
-                <span className="lineup__tag lineup__tag--pending">{t.lineup.tags.tba}</span>
               )}
             </div>
           ))}

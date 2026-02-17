@@ -29,28 +29,24 @@
   background: var(--noir-card);
 }
 
-.lineup__row--pending {
-  opacity: 0;
-}
-
-.lineup__list--visible .lineup__row--pending {
-  opacity: 0.45;
-}
-
 /* Blur for unconfirmed artists */
 .lineup__row--blur {
   opacity: 0;
 }
 
 .lineup__list--visible .lineup__row--blur {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .lineup__row--blur .lineup__name,
 .lineup__row--blur .lineup__time {
-  filter: blur(5px);
+  filter: blur(8px);
   user-select: none;
   pointer-events: none;
+}
+
+.lineup__row--blur:hover {
+  background: none;
 }
 
 .lineup__row + .lineup__row {
