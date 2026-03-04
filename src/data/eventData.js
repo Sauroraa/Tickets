@@ -44,7 +44,7 @@ export const lineup = {
     { time: '03h45 - 04h30', name: 'Chamber B2B Big Jay',             tag: null,                tier: 'support' },
     { time: '23h45 - 00h45', name: 'NXW \u2022 Juliux \u2022 Jack-E', tag: 'BDAY SET \u2022 1H', tier: 'support' },
     { time: '20h45 - 21h30', name: 'Erbmos',                          tag: 'SOLO SET',          tier: 'support' },
-    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer B2B Foxtrot',      tag: null,                tier: 'support' },
+    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer',                   tag: null,                tier: 'support' },
   ],
 }
 
