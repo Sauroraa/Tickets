@@ -5,6 +5,7 @@ export const event = {
   dateDisplay: '28 Mars 2026',
   horaires: '20h00 — 06h00',
   style: 'Jump-Up / Drum & Bass',
+  ageMin: '16+',
   lieu: {
     nom: 'Palais des Congrès de Liège',
     adresse: 'Esplanade de l\'Europe 2, 4020 Liège',
@@ -23,20 +24,27 @@ export const event = {
 
 export const lineup = {
   revealed: true,
+  // Times hidden until this date — auto-reveal on March 27
+  timesRevealDate: '2026-03-27T00:00:00',
+  mcs: ['MC Mitch', 'MC Drivah', 'MC Dinoo', 'MC Deks'],
   artists: [
-    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer', tag: null },
-    { time: '20h45 - 21h30', name: 'Erbmos', tag: null },
-    { time: '21h30 - 22h15', name: 'Mono Audio', tag: null },
-    { time: '22h15 - 23h00', name: 'Underground Waves', tag: 'SHOWCASE' },
-    { time: '23h00 - 23h45', name: 'The Prototypes', tag: null, blur: true },
-    { time: '23h45 - 00h45', name: 'NXW & Juliux & Jack-E', tag: 'BDAY SET \u2022 1H' },
-    { time: '00h45 - 01h30', name: 'Tsuki / BadHabitz', tag: null, blur: true },
-    { time: '01h30 - 02h15', name: 'Jump UP Cave', tag: null, blur: true },
-    { time: '02h15 - 03h00', name: 'Fanatics B2B Latte', tag: null, blur: true },
-    { time: '03h00 - 03h45', name: 'Sero B2B Sedativ B2B MATOX B2B Zequals', tag: null },
-    { time: '03h45 - 04h30', name: 'Chamber B2B Big Jay', tag: null },
-    { time: '04h30 - 05h15', name: 'Skamm B2B Lixed', tag: null, blur: true },
-    { time: '05h15 - 06h00', name: 'Equinoxx', tag: 'SHOWCASE' },
+    // Opening / Support
+    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer B2B Foxtrot', tag: null,              tier: 'support' },
+    { time: '20h45 - 21h30', name: 'Erbmos',                       tag: 'SOLO SET',        tier: 'support' },
+    { time: '21h30 - 22h15', name: 'Chamber B2B Big Jay G',         tag: null,              tier: 'support' },
+    // Showcases
+    { time: '22h15 - 23h00', name: 'Dyna / Skiff / Popsatx',       tag: 'EQUINOXX',        tier: 'showcase' },
+    { time: '23h00 - 23h45', name: 'Trouxa / Hyptic / Arte',        tag: 'UNDERGROUND WAVES', tier: 'showcase' },
+    { time: '23h45 - 00h30', name: 'Kuranko / Yazmin C / Shredz',   tag: 'MONO AUDIO',      tier: 'showcase' },
+    { time: '00h30 - 01h15', name: 'Sero B2B Sedativ B2B Matox B2B Zequals', tag: 'SAURORAA', tier: 'showcase' },
+    // Main acts
+    { time: '01h15 - 02h00', name: 'Fanatics',                      tag: null,              tier: 'main' },
+    { time: '02h00 - 03h00', name: 'NXW \u2022 Juliux \u2022 Jack-E', tag: 'BDAY SET \u2022 1H', tier: 'main' },
+    { time: '03h00 - 03h45', name: 'Python',                        tag: 'OLD SCHOOL SET',  tier: 'main' },
+    { time: '03h45 - 04h30', name: 'Skamm B2B Lixed',               tag: null,              tier: 'main' },
+    // Headliners
+    { time: '04h30 - 05h15', name: "Smokin' Pandas",                tag: 'OLD SCHOOL SET',  tier: 'headliner' },
+    { time: '05h15 - 06h00', name: 'The Prototypes',                tag: 'OLD SCHOOL SET',  tier: 'headliner' },
   ],
 }
 
@@ -50,7 +58,7 @@ export const ambiance = {
 }
 
 export const faq = [
-  { question: 'Quel est l\'âge minimum ?', answer: 'L\'événement est accessible à partir de 18 ans. Une pièce d\'identité pourra être demandée à l\'entrée.' },
+  { question: 'Quel est l\'âge minimum ?', answer: 'L\'événement est accessible à partir de 16 ans. Une pièce d\'identité pourra être demandée à l\'entrée.' },
   { question: 'Y a-t-il un vestiaire ?', answer: 'Oui, un vestiaire sera disponible sur place (payant, environ 2\u20AC).' },
   { question: 'Peut-on acheter des tickets sur place ?', answer: 'Oui, des tickets seront disponibles à l\'entrée mais à un tarif plus élevé. Nous vous recommandons fortement d\'acheter vos billets en ligne à l\'avance pour bénéficier des meilleurs prix.' },
   { question: 'Comment fonctionnent les boissons ?', answer: 'Les boissons fonctionnent avec un système de tickets boissons, achetables sur place en cash ou par carte bancaire.' },

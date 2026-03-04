@@ -36,10 +36,12 @@ export default {
     title: 'LINE-UP',
     comingSoon: 'LINE-UP DROP SOON',
     comingSub: 'Stay locked.',
-    tags: {
-      showcase: 'SHOWCASE',
-      pending: 'IN CONFIRMATION',
-      tba: 'TBA',
+    timetableReveal: 'Full timetable available on March 27',
+    tiers: {
+      headliners: 'HEADLINERS',
+      artists: 'ARTISTS',
+      showcases: 'SHOWCASES',
+      support: 'OPENING',
     },
   },
 
@@ -67,7 +69,7 @@ export default {
   faq: {
     title: 'FAQ',
     items: [
-      { question: 'What is the minimum age?', answer: 'The event is accessible from 18 years old. ID may be requested at the entrance.' },
+      { question: 'What is the minimum age?', answer: 'The event is accessible from 16 years old. ID may be requested at the entrance.' },
       { question: 'Is there a cloakroom?', answer: 'Yes, a cloakroom will be available on site (paid, approximately €2).' },
       { question: 'Can I buy tickets at the door?', answer: 'Yes, tickets will be available at the door but at a higher price. We strongly recommend purchasing your tickets online in advance to get the best prices.' },
       { question: 'How do drinks work?', answer: 'Drinks work with a drink ticket system, purchasable on site with cash or card.' },

@@ -36,10 +36,12 @@ export default {
     title: 'LINE-UP',
     comingSoon: 'LINE-UP BINNENKORT',
     comingSub: 'Blijf op de hoogte.',
-    tags: {
-      showcase: 'SHOWCASE',
-      pending: 'IN BEVESTIGING',
-      tba: 'TBA',
+    timetableReveal: 'Volledige timetable beschikbaar op 27 maart',
+    tiers: {
+      headliners: 'HEADLINERS',
+      artists: 'ARTIESTEN',
+      showcases: 'SHOWCASES',
+      support: 'OPENING',
     },
   },
 
@@ -67,7 +69,7 @@ export default {
   faq: {
     title: 'FAQ',
     items: [
-      { question: 'Wat is de minimumleeftijd?', answer: 'Het evenement is toegankelijk vanaf 18 jaar. Er kan om een identiteitsbewijs gevraagd worden bij de ingang.' },
+      { question: 'Wat is de minimumleeftijd?', answer: 'Het evenement is toegankelijk vanaf 16 jaar. Er kan om een identiteitsbewijs gevraagd worden bij de ingang.' },
       { question: 'Is er een garderobe?', answer: 'Ja, er zal een garderobe beschikbaar zijn ter plaatse (betalend, ongeveer €2).' },
       { question: 'Kan ik tickets kopen aan de deur?', answer: 'Ja, tickets zullen beschikbaar zijn aan de deur maar tegen een hogere prijs. We raden sterk aan om uw tickets vooraf online te kopen voor de beste prijzen.' },
       { question: 'Hoe werken de drankjes?', answer: 'Drankjes werken met een drankticketsysteem, ter plaatse te kopen met cash of kaart.' },

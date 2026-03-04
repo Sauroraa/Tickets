@@ -36,10 +36,12 @@ export default {
     title: 'LINE-UP',
     comingSoon: 'LINE-UP DROP SOON',
     comingSub: 'Stay locked.',
-    tags: {
-      showcase: 'SHOWCASE',
-      pending: 'EN CONFIRMATION',
-      tba: 'TBA',
+    timetableReveal: 'Timetable complète disponible le 27 Mars',
+    tiers: {
+      headliners: 'HEADLINERS',
+      artists: 'ARTISTES',
+      showcases: 'SHOWCASES',
+      support: 'OUVERTURE',
     },
   },
 
@@ -67,7 +69,7 @@ export default {
   faq: {
     title: 'FAQ',
     items: [
-      { question: 'Quel est l\'âge minimum ?', answer: 'L\'événement est accessible à partir de 18 ans. Une pièce d\'identité pourra être demandée à l\'entrée.' },
+      { question: 'Quel est l\'âge minimum ?', answer: 'L\'événement est accessible à partir de 16 ans. Une pièce d\'identité pourra être demandée à l\'entrée.' },
       { question: 'Y a-t-il un vestiaire ?', answer: 'Oui, un vestiaire sera disponible sur place (payant, environ 2€).' },
       { question: 'Peut-on acheter des tickets sur place ?', answer: 'Oui, des tickets seront disponibles à l\'entrée mais à un tarif plus élevé. Nous vous recommandons fortement d\'acheter vos billets en ligne à l\'avance pour bénéficier des meilleurs prix.' },
       { question: 'Comment fonctionnent les boissons ?', answer: 'Les boissons fonctionnent avec un système de tickets boissons, achetables sur place en cash ou par carte bancaire.' },
