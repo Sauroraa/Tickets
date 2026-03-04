@@ -33,12 +33,32 @@ function getTagClass(tag) {
   return 'lineup__tag--showcase'
 }
 
+function TierSection({ artists, tierClass, delayStart, showTimes }) {
+  return artists.map((artist, i) => (
+    <div
+      key={`${tierClass}-${i}`}
+      className={`lineup__row lineup__row--${tierClass}`}
+      style={{ transitionDelay: `${(delayStart + i) * 0.06}s` }}
+    >
+      {showTimes && <span className="lineup__time">{artist.time}</span>}
+      <span className="lineup__name">{artist.name}</span>
+      {artist.tag && (
+        <span className={`lineup__tag ${getTagClass(artist.tag)}`}>{artist.tag}</span>
+      )}
+    </div>
+  ))
+}
+
 export default function Lineup() {
   const sectionRef = useRef(null)
   const visible = useInView(sectionRef)
   const { t } = useTranslation()
 
   const showTimes = new Date() >= new Date(lineup.timesRevealDate)
+
+  const headliners = lineup.artists.filter(a => a.tier === 'headliner')
+  const showcases  = lineup.artists.filter(a => a.tier === 'showcase')
+  const support    = lineup.artists.filter(a => a.tier === 'support')
 
   return (
     <section id="lineup" className="lineup" ref={sectionRef}>
@@ -54,55 +74,15 @@ export default function Lineup() {
       {lineup.revealed ? (
         <div className={`lineup__list ${visible ? 'lineup__list--visible' : ''}`}>
 
-          {/* Headliners */}
           <div className="lineup__tier-label">{t.lineup.tiers.headliners}</div>
-          {lineup.artists.filter(a => a.tier === 'headliner').reverse().map((artist, i) => (
-            <div key={`h-${i}`} className="lineup__row lineup__row--headliner" style={{ transitionDelay: `${i * 0.06}s` }}>
-              {showTimes && <span className="lineup__time">{artist.time}</span>}
-              <span className="lineup__name">{artist.name}</span>
-              {artist.tag && (
-                <span className={`lineup__tag ${getTagClass(artist.tag)}`}>{artist.tag}</span>
-              )}
-            </div>
-          ))}
+          <TierSection artists={headliners} tierClass="headliner" delayStart={0} showTimes={showTimes} />
 
-          {/* Main acts */}
-          <div className="lineup__tier-label">{t.lineup.tiers.artists}</div>
-          {lineup.artists.filter(a => a.tier === 'main').reverse().map((artist, i) => (
-            <div key={`m-${i}`} className="lineup__row lineup__row--main" style={{ transitionDelay: `${(i + 2) * 0.06}s` }}>
-              {showTimes && <span className="lineup__time">{artist.time}</span>}
-              <span className="lineup__name">{artist.name}</span>
-              {artist.tag && (
-                <span className={`lineup__tag ${getTagClass(artist.tag)}`}>{artist.tag}</span>
-              )}
-            </div>
-          ))}
-
-          {/* Showcases */}
           <div className="lineup__tier-label">{t.lineup.tiers.showcases}</div>
-          {lineup.artists.filter(a => a.tier === 'showcase').reverse().map((artist, i) => (
-            <div key={`s-${i}`} className="lineup__row lineup__row--showcase" style={{ transitionDelay: `${(i + 6) * 0.06}s` }}>
-              {showTimes && <span className="lineup__time">{artist.time}</span>}
-              <span className="lineup__name">{artist.name}</span>
-              {artist.tag && (
-                <span className={`lineup__tag ${getTagClass(artist.tag)}`}>{artist.tag}</span>
-              )}
-            </div>
-          ))}
+          <TierSection artists={showcases} tierClass="showcase" delayStart={2} showTimes={showTimes} />
 
-          {/* Support */}
           <div className="lineup__tier-label">{t.lineup.tiers.support}</div>
-          {lineup.artists.filter(a => a.tier === 'support').reverse().map((artist, i) => (
-            <div key={`sup-${i}`} className="lineup__row lineup__row--support" style={{ transitionDelay: `${(i + 10) * 0.06}s` }}>
-              {showTimes && <span className="lineup__time">{artist.time}</span>}
-              <span className="lineup__name">{artist.name}</span>
-              {artist.tag && (
-                <span className={`lineup__tag ${getTagClass(artist.tag)}`}>{artist.tag}</span>
-              )}
-            </div>
-          ))}
+          <TierSection artists={support} tierClass="support" delayStart={6} showTimes={showTimes} />
 
-          {/* MCs */}
           {lineup.mcs && (
             <div className="lineup__mcs" style={{ transitionDelay: '0.9s' }}>
               <span className="lineup__mcs-label">HOSTED BY MCS</span>
