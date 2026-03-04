@@ -7,7 +7,7 @@ export const event = {
   style: 'Jump-Up / Drum & Bass',
   ageMin: '16+',
   lieu: {
-    nom: 'Palais des Congrès de Liège',
+    nom: 'Bar des Congressiste - Liège',
     adresse: 'Esplanade de l\'Europe 2, 4020 Liège',
     maps: 'https://maps.google.com/?q=Palais+des+Congrès+de+Liège',
   },
