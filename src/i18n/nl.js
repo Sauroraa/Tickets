@@ -41,7 +41,7 @@ export default {
       headliners: 'HEADLINERS',
       artists: 'ARTIESTEN',
       showcases: 'SHOWCASES',
-      support: 'OPENING',
+      support: 'SUPPORT',
     },
   },
 

@@ -27,24 +27,24 @@ export const lineup = {
   timesRevealDate: '2026-03-27T00:00:00',
   mcs: ['MC Mitch', 'MC Drivah', 'MC Dinoo', 'MC Deks'],
   artists: [
-    // ─── Headliners ────────────────────────────────────────
-    { time: '05h15 - 06h00', name: 'The Prototypes',                tag: 'OLD SCHOOL SET',   tier: 'headliner' },
-    { time: '04h30 - 05h15', name: "Smokin' Pandas",                tag: 'OLD SCHOOL SET',   tier: 'headliner' },
+    // ─── Headliners ────────────────────────────────────────────────────────
+    { time: '23h00 - 23h45', name: 'The Prototypes',                  tag: 'OLD SCHOOL SET',    tier: 'headliner' },
+    { time: '01h30 - 02h15', name: "Smokin' Pandas",                  tag: 'OLD SCHOOL SET',    tier: 'headliner' },
 
-    // ─── Showcases ─────────────────────────────────────────
-    { time: '00h30 - 01h15', name: 'Sero B2B Sedativ B2B Matox B2B Zequals', tag: 'SAURORAA', tier: 'showcase' },
-    { time: '23h45 - 00h30', name: 'Kuranko / Yazmin C / Shredz',   tag: 'MONO AUDIO',       tier: 'showcase' },
-    { time: '23h00 - 23h45', name: 'Trouxa / Hyptic / Arte',        tag: 'UNDERGROUND WAVES', tier: 'showcase' },
-    { time: '22h15 - 23h00', name: 'Dyna / Skiff / Popsatx',        tag: 'EQUINOXX',         tier: 'showcase' },
+    // ─── Showcases ─────────────────────────────────────────────────────────
+    { time: '03h00 - 03h45', name: 'Sero B2B Sedativ B2B MATOX B2B Zequals', tag: 'SAURORAA',  tier: 'showcase' },
+    { time: '21h30 - 22h15', name: 'Yazmin C / Kuranko / Shredz',     tag: 'MONO AUDIO',        tier: 'showcase' },
+    { time: '22h15 - 23h00', name: 'Trouxa / Arte / Hyptic',          tag: 'UNDERGROUND WAVES', tier: 'showcase' },
+    { time: '05h15 - 06h00', name: 'Skiff / Dyna / Popsatx',          tag: 'EQUINOXX',          tier: 'showcase' },
 
-    // ─── Ouverture — ordre exact demandé ───────────────────
-    { time: '03h45 - 04h30', name: 'Skamm B2B Lixed',               tag: null,               tier: 'support' },
-    { time: '03h00 - 03h45', name: 'Python',                        tag: 'RETURN SET',       tier: 'support' },
-    { time: '01h15 - 02h00', name: 'Fanatics',                      tag: null,               tier: 'support' },
-    { time: '21h30 - 22h15', name: 'Chamber B2B Big Jay G',          tag: null,               tier: 'support' },
-    { time: '02h00 - 03h00', name: 'NXW \u2022 Juliux \u2022 Jack-E', tag: 'BDAY SET \u2022 1H', tier: 'support' },
-    { time: '20h45 - 21h30', name: 'Erbmos',                        tag: 'SOLO SET',         tier: 'support' },
-    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer B2B Foxtrot',    tag: null,               tier: 'support' },
+    // ─── Ouverture — ordre exact ────────────────────────────────────────────
+    { time: '04h30 - 05h15', name: 'Skamm B2B Lixed',                 tag: null,                tier: 'support' },
+    { time: '00h45 - 01h30', name: 'Python',                          tag: 'RETURN SET',        tier: 'support' },
+    { time: '02h15 - 03h00', name: 'Fanatics',                        tag: null,                tier: 'support' },
+    { time: '03h45 - 04h30', name: 'Chamber B2B Big Jay',             tag: null,                tier: 'support' },
+    { time: '23h45 - 00h45', name: 'NXW \u2022 Juliux \u2022 Jack-E', tag: 'BDAY SET \u2022 1H', tier: 'support' },
+    { time: '20h45 - 21h30', name: 'Erbmos',                          tag: 'SOLO SET',          tier: 'support' },
+    { time: '20h00 - 20h45', name: 'SCK B2B Gygzer B2B Foxtrot',      tag: null,                tier: 'support' },
   ],
 }
 

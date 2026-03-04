@@ -77,11 +77,11 @@ export default function Lineup() {
           <div className="lineup__tier-label">{t.lineup.tiers.headliners}</div>
           <TierSection artists={headliners} tierClass="headliner" delayStart={0} showTimes={showTimes} />
 
-          <div className="lineup__tier-label">{t.lineup.tiers.showcases}</div>
-          <TierSection artists={showcases} tierClass="showcase" delayStart={2} showTimes={showTimes} />
-
           <div className="lineup__tier-label">{t.lineup.tiers.support}</div>
-          <TierSection artists={support} tierClass="support" delayStart={6} showTimes={showTimes} />
+          <TierSection artists={support} tierClass="support" delayStart={2} showTimes={showTimes} />
+
+          <div className="lineup__tier-label">{t.lineup.tiers.showcases}</div>
+          <TierSection artists={showcases} tierClass="showcase" delayStart={9} showTimes={showTimes} />
 
           {lineup.mcs && (
             <div className="lineup__mcs" style={{ transitionDelay: '0.9s' }}>
