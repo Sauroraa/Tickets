@@ -160,6 +160,11 @@
   color: #ff7800;
 }
 
+.lineup__tag--return {
+  background: rgba(0, 200, 180, 0.08);
+  color: #00c8b4;
+}
+
 .lineup__tag--special {
   background: rgba(255, 180, 0, 0.08);
   color: #ffb400;

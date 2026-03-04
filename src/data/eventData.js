@@ -40,7 +40,7 @@ export const lineup = {
     // Main acts
     { time: '01h15 - 02h00', name: 'Fanatics',                      tag: null,              tier: 'main' },
     { time: '02h00 - 03h00', name: 'NXW \u2022 Juliux \u2022 Jack-E', tag: 'BDAY SET \u2022 1H', tier: 'main' },
-    { time: '03h00 - 03h45', name: 'Python',                        tag: 'OLD SCHOOL SET',  tier: 'main' },
+    { time: '03h00 - 03h45', name: 'Python',                        tag: 'RETURN SET',      tier: 'main' },
     { time: '03h45 - 04h30', name: 'Skamm B2B Lixed',               tag: null,              tier: 'main' },
     // Headliners
     { time: '04h30 - 05h15', name: "Smokin' Pandas",                tag: 'OLD SCHOOL SET',  tier: 'headliner' },

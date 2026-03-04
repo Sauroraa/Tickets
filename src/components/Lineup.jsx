@@ -23,6 +23,7 @@ function useInView(ref, threshold = 0.05) {
 function getTagClass(tag) {
   if (!tag) return ''
   if (tag === 'OLD SCHOOL SET') return 'lineup__tag--old-school'
+  if (tag === 'RETURN SET') return 'lineup__tag--return'
   if (tag.includes('BDAY')) return 'lineup__tag--special'
   if (tag === 'SOLO SET') return 'lineup__tag--solo'
   if (tag === 'SAURORAA') return 'lineup__tag--sauroraa'
