@@ -1,0 +1,153 @@
+.countdown {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.countdown__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.countdown__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(10, 10, 10, 0.85) 100%);
+  pointer-events: none;
+}
+
+.countdown__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.countdown__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.countdown__name {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.countdown__tagline {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+/* Label */
+.countdown__label {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* Timer */
+.countdown__timer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.countdown__box {
+  background: rgba(225, 6, 0, 0.08);
+  border: 1px solid rgba(225, 6, 0, 0.2);
+  border-radius: 12px;
+  padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1rem, 3vw, 1.8rem);
+  min-width: clamp(80px, 12vw, 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown__value {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__unit-label {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.countdown__sep {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #E10600;
+  line-height: 1;
+  margin-top: clamp(0.6rem, 1.5vw, 1rem);
+  opacity: 0.7;
+}
+
+/* Meta */
+.countdown__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 1px;
+}
+
+.countdown__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #E10600;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .countdown__timer {
+    gap: 0.6rem;
+  }
+  .countdown__sep {
+    margin-top: 0.5rem;
+  }
+}
