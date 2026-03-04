@@ -28,7 +28,7 @@ export const lineup = {
   mcs: ['MC Mitch', 'MC Drivah', 'MC Dinoo', 'MC Deks'],
   artists: [
     // ─── Headliners ────────────────────────────────────────────────────────
-    { time: '23h00 - 23h45', name: 'The Prototypes',                  tag: 'OLD SCHOOL SET',    tier: 'headliner' },
+    { time: '23h00 - 23h45', name: 'The Prototypes',                  tag: null,                tier: 'headliner' },
     { time: '01h30 - 02h15', name: "Smokin' Pandas",                  tag: 'OLD SCHOOL SET',    tier: 'headliner' },
 
     // ─── Showcases ─────────────────────────────────────────────────────────
