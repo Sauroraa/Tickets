@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { event } from '../data/eventData'
 import './Countdown.css'
 
-// Target: today at 18:00 local time
 const OPEN_TIME = (() => {
   const d = new Date()
   d.setHours(18, 0, 0, 0)
@@ -26,15 +25,15 @@ function Particles() {
 
   const init = useCallback((canvas) => {
     const particles = []
-    const count = Math.floor((canvas.width * canvas.height) / 20000)
+    const count = Math.floor((canvas.width * canvas.height) / 22000)
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.2,
-        vy: -Math.random() * 0.3 - 0.1,
-        size: Math.random() * 1.5 + 0.3,
-        opacity: Math.random() * 0.3 + 0.05,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: -Math.random() * 0.25 - 0.05,
+        size: Math.random() * 1.2 + 0.2,
+        opacity: Math.random() * 0.2 + 0.03,
         pulse: Math.random() * Math.PI * 2,
       })
     }
@@ -57,7 +56,7 @@ function Particles() {
       for (const p of particlesRef.current) {
         p.x += p.vx
         p.y += p.vy
-        p.pulse += 0.015
+        p.pulse += 0.012
         if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width }
         if (p.x < -10) p.x = canvas.width + 10
         if (p.x > canvas.width + 10) p.x = -10
@@ -76,7 +75,7 @@ function Particles() {
     }
   }, [init])
 
-  return <canvas ref={canvasRef} className="countdown__particles" />
+  return <canvas ref={canvasRef} className="cd__particles" />
 }
 
 export default function Countdown({ onOpen }) {
@@ -85,12 +84,8 @@ export default function Countdown({ onOpen }) {
   useEffect(() => {
     const tick = setInterval(() => {
       const tl = getTimeLeft()
-      if (!tl) {
-        clearInterval(tick)
-        onOpen()
-      } else {
-        setTimeLeft(tl)
-      }
+      if (!tl) { clearInterval(tick); onOpen() }
+      else setTimeLeft(tl)
     }, 1000)
     return () => clearInterval(tick)
   }, [onOpen])
@@ -98,46 +93,74 @@ export default function Countdown({ onOpen }) {
   const pad = (n) => String(n).padStart(2, '0')
 
   return (
-    <div className="countdown">
+    <div className="cd">
       <Particles />
-      <div className="countdown__vignette" />
-      <div className="countdown__content">
-        <div className="countdown__logo">
-          <span className="countdown__name">{event.name}</span>
-          <span className="countdown__tagline">{event.tagline}</span>
+      <div className="cd__noise" />
+
+      {/* Bande maintenance haut */}
+      <div className="cd__stripe cd__stripe--top" />
+
+      <div className="cd__content">
+
+        {/* Badge statut */}
+        <div className="cd__status">
+          <span className="cd__status-dot" />
+          <span className="cd__status-text">SITE EN MAINTENANCE</span>
         </div>
 
-        <p className="countdown__label">La billetterie ouvre dans</p>
+        {/* Logo */}
+        <div className="cd__logo">
+          <span className="cd__name">{event.name}</span>
+          <span className="cd__tagline">{event.tagline}</span>
+        </div>
 
-        <div className="countdown__timer">
-          <div className="countdown__unit">
-            <div className="countdown__box">
-              <span className="countdown__value">{pad(timeLeft?.heures ?? 0)}</span>
+        {/* Séparateur */}
+        <div className="cd__divider">
+          <div className="cd__divider-line" />
+          <span className="cd__divider-icon">⚙</span>
+          <div className="cd__divider-line" />
+        </div>
+
+        {/* Titre principal */}
+        <p className="cd__headline">OUVERTURE DE LA BILLETTERIE DANS</p>
+
+        {/* Timer */}
+        <div className="cd__timer">
+          <div className="cd__unit">
+            <div className="cd__box">
+              <span className="cd__value">{pad(timeLeft?.heures ?? 0)}</span>
             </div>
-            <span className="countdown__unit-label">Heures</span>
+            <span className="cd__unit-label">Heures</span>
           </div>
-          <span className="countdown__sep">:</span>
-          <div className="countdown__unit">
-            <div className="countdown__box">
-              <span className="countdown__value">{pad(timeLeft?.minutes ?? 0)}</span>
+          <span className="cd__sep">:</span>
+          <div className="cd__unit">
+            <div className="cd__box">
+              <span className="cd__value">{pad(timeLeft?.minutes ?? 0)}</span>
             </div>
-            <span className="countdown__unit-label">Minutes</span>
+            <span className="cd__unit-label">Minutes</span>
           </div>
-          <span className="countdown__sep">:</span>
-          <div className="countdown__unit">
-            <div className="countdown__box">
-              <span className="countdown__value">{pad(timeLeft?.secondes ?? 0)}</span>
+          <span className="cd__sep">:</span>
+          <div className="cd__unit">
+            <div className="cd__box">
+              <span className="cd__value">{pad(timeLeft?.secondes ?? 0)}</span>
             </div>
-            <span className="countdown__unit-label">Secondes</span>
+            <span className="cd__unit-label">Secondes</span>
           </div>
         </div>
 
-        <div className="countdown__meta">
+        {/* Meta */}
+        <div className="cd__meta">
           <span>{event.dateDisplay}</span>
-          <span className="countdown__dot" />
+          <span className="cd__dot" />
           <span>{event.lieu.nom}</span>
+          <span className="cd__dot" />
+          <span>{event.style}</span>
         </div>
+
       </div>
+
+      {/* Bande maintenance bas */}
+      <div className="cd__stripe cd__stripe--bottom" />
     </div>
   )
 }
